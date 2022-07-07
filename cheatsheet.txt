@@ -4,6 +4,12 @@ Detailed --> cat /etc/*release
 Breif    --> lsb_release -a
 
 
+Archives
+--------------------------
+.zip      : unzip [archive.zip] -d [destination]
+.tar.gzip : tar –xvzf [archive.tar.gz] 
+
+
 PATH
 ---------------------------
 Add mydir to PATH: export PATH="path/to/mydir:$PATH"
