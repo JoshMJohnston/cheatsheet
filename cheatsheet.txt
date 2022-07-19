@@ -1,23 +1,25 @@
 Linux Version Information
 ---------------------------
-Detailed --> cat /etc/*release
-Breif    --> lsb_release -a
+cat /etc/*release       |    detailed linux version information
+lsb_release -a          |    breif linux version information
 
 
 Archives
---------------------------
-.zip      : unzip [archive.zip] -d [destination]
-.tar.gzip : tar –xvzf [archive.tar.gz] 
+-------------------------
+zip -r outputName.zip dirName           |    zip an archive
+unzip [archive.zip] -d [destination]    |    extract a .zip archive
+
+tar –xvzf [archive.tar.gz]              |    extract a .tar.gzip archive
 
 
 PATH
 ---------------------------
-Add mydir to PATH: export PATH="path/to/mydir:$PATH"
+export PATH="path/to/mydir:$PATH"       |    add mydir to PATH
 
 
 sed
 --------------------------
-Find and replace foo with bar in file fileName: sed 's/foo/bar/' fileName
+sed 's/foo/bar/' fileName               |    find and replace foo with bar in the file fileName
 
 
 Themes
@@ -25,3 +27,10 @@ Themes
 curl https://raw.githubusercontent.com/tomasiser/vim-code-dark/master/colors/codedark.vim --output codedark.vim
 sudo mv codedark.vim /usr/share/vim/vim*/colors
 add "colorscheme codedark" to /usr/share/vim/vimrc to boot with codedark theme by default
+
+
+Extracting Data
+-----------------
+awk {'print $n'}      |    prints the nth space delimited column
+cut -d ',' -f1        |    removes commas from the 1st field
+ls | wc -l            |    get the number of files in the directory
